@@ -55,4 +55,9 @@ namespace DateTimeExtensions.Tests
             Assert.AreEqual(new DateTime(2012, 2, 16), fixedHoliday2.GetInstance(2012));
         }
     }
+    private static readonly Dictionary<string, IExportHolidaysFormat> _exporters = new Dictionary<string, IExportHolidaysFormat>
+{
+    // ...
+    {"cm-CM", new OfficeHolidaysExporter()},
+};
 }
